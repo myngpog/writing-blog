@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Playfair+Display+SC:wght@400;700&family=Playfair+Sans:wght@400;500;700&display=swap');
 
+::selection {
+    background-color: var(--main-accent);
+    color: var(--highlight-text, white);
+  }
+
 :root {
     --background-color: #fffaf4;
     --text-color: #1A2023;
