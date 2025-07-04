@@ -1,10 +1,24 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './theme.css'
-import App from './App.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+import App from "./App";
+import HomePage from "./HomePage";
+import PostsPage from "./components/PostsPage";
+import Publications from "./components/Publications";
+import WritingStatsPage from "./components/WritingStatsPage";
+
+import "./theme.css";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />}>
+        <Route index element={<HomePage />} />
+        <Route path="posts" element={<PostsPage />} />
+        <Route path="stats" element={<WritingStatsPage />} />
+        <Route path="publications" element={<Publications />}/>
+      </Route>
+    </Routes>
+  </BrowserRouter>
+);

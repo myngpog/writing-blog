@@ -9,7 +9,6 @@ export default function PostsPage() {
 
   return (
     <div className="home-container">
-      <Sidebar />
       {loading ? (
         <div>Loading posts...</div>
       ) : (
