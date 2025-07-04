@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Playfair+Display+SC:wght@400;700&family=Playfair+Sans:wght@400;500;700&display=swap');
+
+:root {
+    --background-color: #fffaf4;
+    --text-color: #1A2023;
+    --accent-dark: #df7f7c;
+    --accent-light: #f0e3c8;
+    --main-accent: rgb(228, 148, 139);
+
+    --link-color: #8c8c8c;
+    --borders-color: #e0e0e0;
+    --title-color: #212121;
+    --icon-background: #f0f0f0;
+    --nav-links-color: #8c8c8c;
+    --nav-links-background: #f0f0f0;
+    --content-background: #f0f0f0;
+    --content-text-color: #3c3c3c;
+    --reblog-icon-color: #79c986;
+    --like-icon-color: #d32f2f;
+
+    --font-header: 'Playfair Display', serif;
+    --font-body: 'Public Sans', sans-serif;
+    --font-accent: 'Quicksand', serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    font-weight: 400;
+}
+
+
+.home-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sidebar {
+    width: 200px;
+    font-family: var(--font-accent);
+}
+
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1em auto;
+}
+
+.gradient-title {
+    font-size: 24px;
+    font-family: var(--font-header);
+    text-align: center;
+    background: linear-gradient(to right, var(--accent-dark), var(--accent-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dot {
+    color: var(--accent-light);
+}
+
+.bio {
+    background-color: var(--content-background);
+    padding: 1em;
+    border-radius: 6px;
+    text-align: center;
+    color: var(--content-text-color);
+}
+
+.search-bar {
+    width: 100%;
+    margin-top: 1em;
+    padding: 0.5em;
+    border-radius: 6px;
+    border: 1px solid var(--borders-color);
+    transition: border 0.3s, box-shadow 0.3s;
+    color: var(--text-color);
+    background: var(--background-color);
+}
+
+.search-bar:focus {
+    border: 1px solid var(--accent-dark);
+    box-shadow: 0 0 5px rgba(252, 184, 182, 0.5);
+    outline: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+
+.nav-links a {
+    background: var(--nav-links-background);
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.nav-separator {
+    display: block;
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--accent-dark);
+    letter-spacing: 0.1em;
+    margin: 0.5em 0;
+    position: relative;
+}
+
+.nav-separator::before,
+.nav-separator::after {
+    content: "";
+    display: inline-block;
+    width: 20%;
+    height: 1px;
+    background: linear-gradient(to right, var(--accent-dark), var(--accent-light));
+    vertical-align: middle;
+    margin: 0 0.5em;
+    opacity: 0.5;
+}
+
+
+.nav-links a:hover {
+    background: linear-gradient(to right, var(--accent-dark), var(--accent-light));
+    color: var(--background-color);
+    transform: translateY(-2px) scale(1.02);
+}
+
+.post-skeleton {
+    height: 150px;
+    background: var(--background-color);
+    border-radius: 6px;
+    margin: 1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    font-size: 1em;
+    animation: pulse 1.5s infinite;
+}
+
+.posts-section {
+    max-width: 600px;
+    flex: 1;
+}
+
+.post-card {
+    border-bottom: 1px solid var(--borders-color);
+    padding: 1em 0;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    background: var(--background-color);
+}
+
+.post-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.gradient-post-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    letter-spacing: 0.05em;
+    line-height: 1.3;
+    font-weight: normal;
+    background: var(--main-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0.5em 0;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.author-avatar {
+    width: 48px;
+    border-radius: 50%;
+}
+
+.author-name {
+    margin: 0;
+    font-weight: 600;
+    color: var(--title-color);
+}
+
+.post-date {
+    font-size: 12px;
+    color: var(--link-color);
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 1em;
+}
+
+.post-title {
+    font-size: 20px;
+    margin-top: 0.5em;
+    font-weight: 600;
+    color: var(--title-color);
+}
+
+.post-excerpt {
+    margin-top: 0.5em;
+    color: var(--content-text-color);
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 0.5em;
+    color: var(--link-color);
+    text-decoration: underline;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.read-more:hover {
+    color: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+button, .button {
+    background: linear-gradient(to right, var(--accent-dark), var(--accent-light));
+    border: none;
+    color: var(--background-color);
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+    font-weight: 600;
+}
+
+button:hover, .button:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: linear-gradient(to right, var(--accent-light), var(--accent-dark));
+}
+
+@media (max-width: 900px) {
+    .home-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .sidebar {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .posts-section,
+    .page-content {
+        max-width: 100%;
+        width: 100%;
+    }
+}
