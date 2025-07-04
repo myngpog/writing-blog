@@ -9,53 +9,116 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import "../lib/chart_data";
+import { months, years } from "../lib/chart_data";
+import { useMemo } from "react";
+import "../styles/homePage.css";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
-export const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: "bottom",
-    },
-  },
-};
+function getMonthsData() {
+  return {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    datasets: [
+      {
+        label: "Fanfiction",
+        data: months.map(({ fanfiction }) => fanfiction),
+        borderColor: "#df7f7c",
+        backgroundColor: "#df7f7c",
+      },
+      {
+        label: "Novel",
+        data: months.map(({ novel }) => novel),
+        borderColor: "rgb(159, 110, 104)",
+        backgroundColor: "rgb(159, 110, 104)",
+      },
+      {
+        label: "Everything",
+        data: months.map(({ fanfiction, novel }) => fanfiction + novel),
+        borderColor: "rgb(201, 163, 93)",
+        backgroundColor: "rgb(201, 163, 93)",
+      },
+    ],
+  };
+}
 
-export const data = {
-  labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-  datasets: [
-    {
-      label: "Fanfiction",
-      data: [200, -300, 400, 150, -500, 600],
-      borderColor: "#df7f7c",
-      backgroundColor: "#df7f7c",
-    },
-    {
-      label: "Novel",
-      data: [-100, 250, -350, 500, -200, 300],
-      borderColor: "rgb(159, 110, 104)",
-      backgroundColor: "rgb(159, 110, 104)",
-    },
-    {
-      label: "Everything",
-      data: [1000, 800, -320, 504, -197, 303],
-      borderColor: "#f0e3c8",
-      backgroundColor: "#f0e3c8",
-    },
-  ],
-  backgroundColor: "red",
-};
+function getYearData() {
+  const currYear = new Date().getFullYear();
+
+  const labels = [];
+  const fanfictionData = [];
+  const novelData = [];
+  const everythingData = [];
+  for (let year = currYear - 11; year <= currYear; ++year) {
+    labels.push(`${String(year).slice(-2)}-${String(year + 1).slice(-2)}`);
+
+    const { fanfiction, novel } = years.get(year) ?? {
+      fanfiction: 0,
+      novel: 0,
+    };
+    fanfictionData.push(fanfiction);
+    novelData.push(novel);
+    everythingData.push(fanfiction + novel);
+  }
+
+  return {
+    labels,
+    datasets: [
+      {
+        label: "Fanfiction",
+        data: fanfictionData,
+        borderColor: "#df7f7c",
+        backgroundColor: "#df7f7c",
+      },
+      {
+        label: "Novel",
+        data: novelData,
+        borderColor: "rgb(159, 110, 104)",
+        backgroundColor: "rgb(159, 110, 104)",
+      },
+      {
+        label: "Everything",
+        data: everythingData,
+        borderColor: "rgb(201, 163, 93)",
+        backgroundColor: "rgb(201, 163, 93)",
+      },
+    ],
+  };
+}
 
 export default function WritingChart() {
+  const monthData = useMemo(getMonthsData, []);
+  const yearData = useMemo(getYearData, []);
+
   return (
-    <div className="chart-bg">
+    <>
+      <h1 className="chart-title">past months writing stats</h1>
       <Line
-        options={options}
-        data={data}
-        width={800}
-        height={400}
+        options={{
+          responsive: true,
+          plugins: {
+            legend: {
+              position: "bottom",
+            },
+          },
+        }}
+        data={monthData}
+        width="100%"
+        height="70%"
       ></Line>
-    </div>
+      <h1 className="chart-title">past years writing stats</h1>
+      <Line
+        options={{
+          responsive: true,
+          plugins: {
+            legend: {
+              position: "bottom",
+            },
+          },
+        }}
+        data={yearData}
+        width="100%"
+        height="70%"
+      ></Line>
+    </>
   );
 }
