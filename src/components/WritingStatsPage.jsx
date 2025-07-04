@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "./Sidebar";
-// import WritingStatsChart from "./components/WritingStatsChart";
+import WritingChart from "./WritingChart";
+import "../styles/writingStatsPage.css"
 
 export default function WritingStatsPage() {
   return (
@@ -8,7 +9,7 @@ export default function WritingStatsPage() {
       <Sidebar />
       <main className="stats-section">
         <h1 className="gradient-title">Writing Stats</h1>
-        {/* <WritingStatsChart /> */}
+        <WritingChart />
       </main>
     </div>
   );
