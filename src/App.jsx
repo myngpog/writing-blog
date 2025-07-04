@@ -1,16 +1,27 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HomePage from "./HomePage";
-import PostsPage from "./components/PostsPage";
-import WritingStatsPage from "./components/WritingStatsPage";
+import React, { useState, useEffect } from "react";
+import { Outlet } from "react-router-dom";
+
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
+import quotes from "./assets/quotes";
 
 export default function App() {
+  const [quote, setQuote] = useState("");
+
+  useEffect(() => {
+    const random = quotes[Math.floor(Math.random() * quotes.length)];
+    setQuote(random);
+  }, []);
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/posts" element={<PostsPage />} />
-        <Route path="/stats" element={<WritingStatsPage />} />
-      </Routes>
-    </Router>
+    <>
+      <Header quote={quote} />
+      <div className="home-container">
+        <Sidebar />
+        <div className="page-content">
+          <Outlet />
+        </div>
+      </div>
+    </>
   );
 }

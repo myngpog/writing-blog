@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/posts.css";
 
 export default function PostList({ posts }) {
   return (
@@ -9,14 +10,16 @@ export default function PostList({ posts }) {
         posts.map(post => (
           <article key={post.ID} className="post-card">
             <div className="post-header">
-              <h3
-                className="gradient-post-title"
-                dangerouslySetInnerHTML={{ __html: post.title }}
-              />
-              <span className="post-date">
-                {new Date(post.date).toLocaleDateString()}
-              </span>
+                <h3
+                    className="gradient-post-title"
+                    dangerouslySetInnerHTML={{ __html: post.title }}
+                />
+                {/* <div className="post-header-line"></div> */}
+                <span className="post-date">
+                    {new Date(post.date).toLocaleDateString()}
+                </span>
             </div>
+
             <p
               className="post-excerpt"
               dangerouslySetInnerHTML={{ __html: post.excerpt }}

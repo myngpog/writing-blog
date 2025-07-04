@@ -1,0 +1,16 @@
+.publication-container {
+    padding: 20px;
+    font-family: var(--font-header);
+    color: var(--dark-pink);
+  }
+  
+  .publication-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .publication-container p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
