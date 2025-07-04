@@ -1,20 +1,38 @@
+import { Link } from "react-router-dom";
+
 export default function Sidebar({ onSearch }) {
     return (
         <aside className="sidebar">
             <img src="src/assets/profile.jpg" className="profile-pic" alt="profile" />
             <h1 className="gradient-title">
-                <a href="/" className="home-link">M.K. Nguyen</a>
+                <Link to="/" className="home-link">M.K. Nguyen</Link>
             </h1>
-            <p className="bio">"your heart is running away with your head"</p>
-            <input
-                type="text"
-                placeholder="Search..."
-                className="search-bar"
-                onChange={(e) => onSearch(e.target.value)}
-            />
+            <p className="bio">It's pronounced Mii</p>
+
+            <form 
+                className="newsletter-form" 
+                onSubmit={(e) => e.preventDefault()}
+            >
+                <input
+                    type="email"
+                    placeholder="Newsletter coming soon!!"
+                    className="newsletter-input"
+                    disabled
+                />
+                <button 
+                    type="submit" 
+                    className="newsletter-button" 
+                    disabled
+                    title="Coming Soon!"
+                >
+                    ✓
+                </button>
+            </form>
+
             <nav className="nav-links">
-                <a href="/posts">Blog & Quotes</a>       
-                <a href="/stats">Writing Stats</a>
+                <Link to="/posts">Blog</Link>
+                <Link to="/stats">Writing Stats</Link>
+                <Link to="/publications">Publications</Link>
 
                 <span className="nav-separator">External</span>
 
