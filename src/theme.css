@@ -232,15 +232,9 @@ body {
     transition: height 0.3s ease;
 } */
 
-.nav-links a:hover::before {
-    height: 100%;
-    z-index: -1;
-}
-
 .nav-links a:hover {
-    background: transparent;
+    background: var(--background-color);
     color: var(--dark-pink);
-    border: 1px solid var(--dark-pink-button);
 }
 
 @media (max-width: 900px) {
