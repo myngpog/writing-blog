@@ -11,10 +11,10 @@ export default function HomePage() {
             about
           </h1>
           <p className="blurb">
-            M.K. (My) Nguyen is a Vietnamese American writer from Southern California. When she's not busy keeping up with the world and caring a little too much about her social life, she spends the rest of her time in her head. 
+            M.K. (My) Nguyen is a Vietnamese American writer from southern California. When she's not busy keeping up with the world and caring a little too much about her social life, she spends the rest of her time in her head. 
             <br></br>
             <br></br>
-            She enjoys writing about troubled (but she likes to call them complex) characters and their navigation of the intricate worlds they exist in. She also likes to collect quotes and spends too much money at boba and coffee shops. 
+            She enjoys writing about troubled (she likes to call them complex) characters and their navigation of the intricate worlds they exist in. She also likes to collect quotes and wastes too much money at tea and coffee shops. 
           </p>
         </div>
         <div className="writing-section">
