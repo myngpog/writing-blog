@@ -1,6 +1,7 @@
 import React from "react";
 import "./theme.css";
 import "./styles/homePage.css";
+import headerImage from './assets/header.jpg';
 
 export default function HomePage() {
   return (
@@ -33,7 +34,7 @@ export default function HomePage() {
           </div>
         </div>
         <img 
-          src="src\assets\header.jpg" 
+          src={headerImage} 
           className="about-image" 
         />
       </main>
