@@ -1,5 +1,4 @@
 import React from "react";
-import Sidebar from "./Sidebar";
 import PostList from "./PostList";
 import usePosts from "./usePosts";
 import "../theme.css";
