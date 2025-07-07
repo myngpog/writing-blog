@@ -1,0 +1,9 @@
+.project-title {
+    font-family: var(--font-header);
+    color: var(--dark-pink);
+}
+
+.project-description {
+    font-family: var(--font-body);
+    color: var(--lighter-content-text-color);
+}
