@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 import Dropdown from "./Dropdown";
-import pfpImage from './assets/profile.jpg';
 
 export default function Sidebar({ onSearch }) {
     return (
         <aside className="sidebar">
-            <img src={pfpImage} className="profile-pic" alt="profile" />
+            <img src="/assets/profile.jpg" className="profile-pic" alt="profile" />
             <h1 className="gradient-title">
                 <Link to="/" className="home-link">M.K. Nguyen</Link>
             </h1>
