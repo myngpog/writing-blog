@@ -235,7 +235,6 @@ body {
 .nav-links a:hover {
     background: var(--background-color);
     color: var(--dark-pink);
-    border: 1px solid var(--dark-pink-button);
 }
 
 @media (max-width: 900px) {

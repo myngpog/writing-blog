@@ -1,13 +1,11 @@
 import "../styles/dropdown.css";
 
-export default function Dropdown() {
+export default function Dropdown({children, text}) {
   return (
     <div class="dropdown">
-      <button class="dropbtn">Works</button>
+      <button class="dropbtn">{text}</button>
       <div class="dropdown-content">
-        <a href="#">Option 1</a>
-        <a href="#">Option 2</a>
-        <a href="#">Option 3</a>
+        {children}
       </div>
     </div>
   );

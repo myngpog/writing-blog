@@ -33,9 +33,11 @@ export default function Sidebar({ onSearch }) {
             <nav className="nav-links">
                 <Link to="/posts">Blog</Link>
                 <Link to="/stats">Writing Stats</Link>
-                <Link to="/projects">Projects</Link>
                 <Link to="/publications">Publications</Link>
-                <Dropdown />
+                <Dropdown text="Projects">
+                    <Link to="/daffodils">Daffodils</Link>
+                    <Link to="/vth">Vth</Link>
+                </Dropdown>
 
                 <span className="nav-separator">External</span>
 
