@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Dropdown from "./Dropdown";
 
 export default function Sidebar({ onSearch }) {
     return (
@@ -34,6 +35,7 @@ export default function Sidebar({ onSearch }) {
                 <Link to="/stats">Writing Stats</Link>
                 <Link to="/art">Fanart</Link>
                 <Link to="/publications">Publications</Link>
+                <Dropdown />
 
                 <span className="nav-separator">External</span>
 
