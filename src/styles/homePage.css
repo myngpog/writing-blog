@@ -40,11 +40,16 @@
   margin-bottom: 5px;
 }
 
-.work-title {
+.work-title, .work-title-button {
   display: inline;
   margin-right: 10px;
   font-family: var(--font-body);
   font-size: 1.15rem;
+  color: var(--lighter-content-text-color);
+}
+
+.work-title-button:hover {
+  color: salmon;
 }
 
 .work-description {

@@ -1,6 +1,8 @@
 import React from "react";
 import "./theme.css";
 import "./styles/homePage.css";
+import { Link } from "react-router-dom";
+
 
 export default function HomePage() {
   return (
@@ -24,7 +26,10 @@ export default function HomePage() {
           <div className="current-works">
             <ul className="works-list">
               <li className="work-item">
-              <p className="work-title">Wait Where the Daffodils Bloom</p><span className="work-description">A historical romance fantasy novel WIP</span>
+                <Link to="/daffodils" className="work-title work-title-button">
+                  Wait Where the Daffodils Bloom
+                </Link>
+                <span className="work-description">A historical romance fantasy; currently REVISING</span>
               </li>
               <li className="work-item">
               <p className="work-title">a day, a night; winter</p><span className="work-description">A(n angsty) Hansy fanfic WIP</span>
