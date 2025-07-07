@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 import Sidebar from "./components/SideBar";
 import Header from "./components/Header";
-import quotes from "./assets/quotes";
+import quotes from "../public/assets/quotes";
 
 export default function App() {
   const [quote, setQuote] = useState("");
