@@ -91,7 +91,7 @@ export default function WritingChart() {
 
   return (
     <>
-      <h1 className="chart-title">past months writing stats</h1>
+      <h1 className="chart-title">past year writing stats</h1>
       <Line
         options={{
           responsive: true,

@@ -7,7 +7,8 @@ import HomePage from "./HomePage";
 import PostsPage from "./components/PostsPage";
 import Publications from "./components/Publications";
 import WritingStatsPage from "./components/WritingStatsPage";
-import Fanart from "./components/Fanart";
+import Projects from "./components/Projects";
+import PostDetail from "./components/PostDetail";
 
 import "./theme.css";
 
@@ -18,8 +19,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route index element={<HomePage />} />
         <Route path="posts" element={<PostsPage />} />
         <Route path="stats" element={<WritingStatsPage />} />
-        <Route path="art" element={<Fanart />} />
+        <Route path="projects" element={<Projects />} />
         <Route path="publications" element={<Publications />}/>
+        <Route path="posts/:id" element={<PostDetail />} />
       </Route>
     </Routes>
   </BrowserRouter>

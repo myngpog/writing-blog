@@ -32,7 +32,7 @@ export default function Sidebar({ onSearch }) {
             <nav className="nav-links">
                 <Link to="/posts">Blog</Link>
                 <Link to="/stats">Writing Stats</Link>
-                <Link to="/art">Fanart</Link>
+                <Link to="/projects">Projects</Link>
                 <Link to="/publications">Publications</Link>
 
                 <span className="nav-separator">External</span>

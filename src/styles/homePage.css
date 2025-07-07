@@ -12,6 +12,7 @@
   font-family: var(--font-header);
   letter-spacing: 0.42rem;
   font-weight: 600;
+  color: var(--dark-pink);
 }
 
 .blurb {
