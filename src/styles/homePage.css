@@ -66,4 +66,7 @@
   .about-me {
     letter-spacing: 0.2rem;
   }
+  .blurb {
+    letter-spacing: 0.015rem;
+  }
 }
