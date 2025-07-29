@@ -1,3 +1,10 @@
+.project-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+  }
+
 .project-title {
     font-family: var(--font-header);
     color: var(--dark-pink);
@@ -7,3 +14,95 @@
     font-family: var(--font-body);
     color: var(--lighter-content-text-color);
 }
+
+.project-summary {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .vertical-line {
+    width: 5px;
+    background-color: var(--dark-pink);
+    height: 100%;
+  }
+  
+  .summary-text {
+    max-width: 70%;
+  }
+  
+  .summary-text h2 {
+    font-size: 1.8rem;
+    font-family: var(--font-header);
+    color: var(--dark-pink);
+  }
+  
+  .project-books h3 {
+    font-size: 1.5rem;
+    color: var(--dark-pink);
+    margin-bottom: 20px;
+  }
+  
+  .book-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .book-item {
+    padding-left: 10px;
+    border-left: 2px solid var(--dark-pink);
+  }
+
+  .content-wrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+  }
+  
+  .book-item h4 {
+    font-size: 1.25rem;
+    font-family: var(--font-header);
+    color: var(--dark-pink);
+  }
+  
+  .book-item p {
+    font-size: 1rem;
+    color: var(--content-text-color);
+  }
+  
+  .project-spotify h3 {
+    font-size: 1.5rem;
+    color: var(--dark-pink);
+    margin-bottom: 10px;
+  }
+  
+  .project-spotify p {
+    font-size: 1rem;
+    color: var(--content-text-color);
+    margin-bottom: 15px;
+  }
+  
+  @media (max-width: 900px) {
+    .home-container {
+      padding: 20px;
+      width: 100%;
+    }
+  
+    .project-summary {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .vertical-line {
+      display: none;
+    }
+  
+    .summary-text {
+      max-width: 100%;
+    }
+  
+    .book-list {
+      gap: 15px;
+    }
+  }
