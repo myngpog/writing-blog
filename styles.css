@@ -25,3 +25,5 @@
     @apply selection:bg-main-accent;
   }
 }
+
+@custom-variant hover (&:hover);
