@@ -6,25 +6,25 @@ import Line from "./Line";
 export default function Sidebar() {
     return (
         <aside className="w-[215px] sidebar flex flex-col items-center gap-4 font-accent">
-            <img src="/assets/profile.jpg" className="w-[150px] rounded-[50%] profile-pic" alt="profile" />
-            <h1 className="text-2xl font-header text-center text-dark-pink font-bold tracking-[0.3rem] hover:text-[rgb(192,143,139)] transition-colors duration-300 gradient-title">
+            <img src="/assets/profile.jpg" className="w-[150px] rounded-[50%]" alt="profile" />
+            <h1 className="text-2xl font-header text-center text-dark-pink font-bold tracking-[0.3rem] hover:text-[rgb(192,143,139)] transition-colors duration-300">
                 <Link to="/" className="home-link">M.K. Nguyen</Link>
             </h1>
-            <p className="text-[#8b9a75] bio">It's pronounced Mii</p>
+            <p className="text-[#8b9a75]">It's pronounced Mii</p>
 
             <form 
-                className="flex flex-row items-center gap-2 newsletter-form" 
+                className="flex flex-row items-center gap-2" 
                 onSubmit={(e) => e.preventDefault()}
             >
                 <input
                     type="email"
                     placeholder="Newsletter coming soon!!"
-                    className="p-1.5 w-full font-body text-[0.8rem] rounded-md border border-[#e0e0e0] disabled:opacity-60 disabled:cursor-not-allowed newsletter-input"
+                    className="p-1.5 w-full font-body text-[0.8rem] rounded-md border border-gray-300 disabled:opacity-60 disabled:cursor-not-allowed"
                     disabled
                 />
                 <button 
                     type="submit" 
-                    className="text-white px-2.5 h-full rounded-md bg-dark-pink-button border border-dark-pink-button hover:bg-transparent hover:text-dark-pink hover:border-dark-pink-button disabled:cursor-not-allowed disabled:opacity-60 newsletter-button" 
+                    className="text-white px-2.5 h-full rounded-md bg-dark-pink-button border border-dark-pink-button hover:bg-transparent hover:text-dark-pink hover:border-dark-pink-button disabled:cursor-not-allowed disabled:opacity-60" 
                     disabled
                     title="Coming Soon!"
                 >
@@ -32,7 +32,7 @@ export default function Sidebar() {
                 </button>
             </form>
 
-            <nav className="flex flex-col w-full gap-2 nav-links">
+            <nav className="flex flex-col w-full gap-2">
                 <WideLink to="/posts">Blog</WideLink>
                 <WideLink to="/stats">Writing Stats</WideLink>
                 <WideLink to="/publications">Publications</WideLink>

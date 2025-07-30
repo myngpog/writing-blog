@@ -2,9 +2,9 @@ import { wideButtonClassNames } from "./WideLink";
 
 export default function WideDropdown({ children, text }) {
   return (
-    <div class="relative group dropdown">
+    <div class="relative group">
       <button
-        class={`${wideButtonClassNames} text-dark-pink  peer w-full group-hover:rounded-b-none dropbtn`}
+        class={`${wideButtonClassNames} text-dark-pink peer w-full group-hover:rounded-b-none`}
       >
         {text}
       </button>

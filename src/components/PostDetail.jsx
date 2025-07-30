@@ -31,7 +31,7 @@ const PostDetail = () => {
     <article className="flex flex-col flex-1">
       <div className="flex flex-row justify-between mb-8 items-center">
         <h1 className="text-4xl font-header text-dark-pink tracking-[0.2rem]">{post.title}</h1>
-        <div className="flex-1 border-t mx-3 border-[#ccc]" />
+        <div className="flex-1 border-t mx-3 border-gray-300" />
         <span className="text-gray-500 text-sm">{formattedDate}</span>
       </div>
       <div
