@@ -18,7 +18,9 @@ export default function HomePage() {
         </p>
       </section>
       <section className="w-full">
-        <Heading className="pb-5 tracking-[0.2rem] lg:tracking-[0.42rem]">currently writing</Heading>
+        <Heading className="pb-5 tracking-[0.2rem] lg:tracking-[0.42rem]">
+          currently writing
+        </Heading>
         <ul className="list-disc pl-10 text-text-light">
           <li>
             <Link
@@ -37,6 +39,7 @@ export default function HomePage() {
           </li>
         </ul>
       </section>
+
       <img
         src="/assets/header.jpg"
         className="object-cover object-center h-[225px] w-full my-4"

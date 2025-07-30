@@ -3,10 +3,11 @@ import WideDropdown from "./WideDropdown";
 import WideLink from "./WideLink";
 import Line from "./Line";
 import Heading from "./Heading";
+import { twMerge } from "tailwind-merge";
 
-export default function Sidebar() {
+export default function Sidebar({className = ""}) {
     return (
-        <aside className="w-[215px] sidebar flex flex-col items-center gap-4 font-accent">
+        <aside className={twMerge("w-[215px] flex sidebar flex-col items-center gap-4 font-accent", className)}>
             <img src="/assets/profile.jpg" className="w-[150px] rounded-[50%]" alt="profile" />
             <Heading className="text-2xl text-center tracking-[0.3rem] hover:text-[rgb(192,143,139)] transition-colors duration-300">
                 <Link to="/">M.K. Nguyen</Link>
