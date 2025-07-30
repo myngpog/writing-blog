@@ -2,14 +2,15 @@ import { Link } from "react-router-dom";
 import WideDropdown from "./WideDropdown";
 import WideLink from "./WideLink";
 import Line from "./Line";
+import Heading from "./Heading";
 
 export default function Sidebar() {
     return (
         <aside className="w-[215px] sidebar flex flex-col items-center gap-4 font-accent">
             <img src="/assets/profile.jpg" className="w-[150px] rounded-[50%]" alt="profile" />
-            <h1 className="text-2xl font-header text-center text-dark-pink font-bold tracking-[0.3rem] hover:text-[rgb(192,143,139)] transition-colors duration-300">
-                <Link to="/" className="home-link">M.K. Nguyen</Link>
-            </h1>
+            <Heading className="text-2xl text-center tracking-[0.3rem] hover:text-[rgb(192,143,139)] transition-colors duration-300">
+                <Link to="/">M.K. Nguyen</Link>
+            </Heading>
             <p className="text-[#8b9a75]">It's pronounced Mii</p>
 
             <form 

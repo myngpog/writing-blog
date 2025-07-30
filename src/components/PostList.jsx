@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Heading from "./Heading";
 
 export default function PostList({ posts }) {
   return (
@@ -12,7 +13,7 @@ export default function PostList({ posts }) {
             className="flex flex-col border-b border-[rgba(83,64,67,0.473)]"
           >
             <div className="flex flex-row mb-6 justify-between items-center">
-              <h3 className="text-dark-pink tracking-wider font-header text-2xl">{post.title}</h3>
+              <Heading className="font-medium text-2xl tracking-wide">{post.title}</Heading>
               <span className="text-sm text-gray-500">
                 {new Date(post.date).toLocaleDateString()}
               </span>

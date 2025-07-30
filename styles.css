@@ -26,4 +26,5 @@
   }
 }
 
+/* https://github.com/tailwindlabs/tailwindcss/discussions/17225 */
 @custom-variant hover (&:hover);

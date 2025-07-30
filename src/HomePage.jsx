@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import Heading from "./components/Heading";
 
 export default function HomePage() {
   return (
     <main className="flex flex-col items-center flex-1 gap-1 about-section">
       <section className="w-full pb-4">
-        <Header>about</Header>
+        <Heading className="pb-5 tracking-[0.2rem] lg:tracking-[0.42rem]">about</Heading>
         <p className="pl-3 border-l text-text-light text-justify text-lg border-dark-pink blurb">
           M.K. (My) Nguyen is a Vietnamese American writer from southern California. When she's not
           busy keeping up with the world and caring a little too much about her social life, she
@@ -17,7 +18,7 @@ export default function HomePage() {
         </p>
       </section>
       <section className="w-full">
-        <Header>currently writing</Header>
+        <Heading className="pb-5 tracking-[0.2rem] lg:tracking-[0.42rem]">currently writing</Heading>
         <ul className="list-disc pl-10 text-text-light">
           <li>
             <Link
@@ -41,13 +42,5 @@ export default function HomePage() {
         className="object-cover object-center h-[225px] w-full my-4"
       />
     </main>
-  );
-}
-
-export function Header({ children }) {
-  return (
-    <h1 className="font-header pb-5 tracking-[0.2rem] lg:tracking-[0.42rem] text-[2rem] font-bold text-dark-pink about-me">
-      {children}
-    </h1>
   );
 }

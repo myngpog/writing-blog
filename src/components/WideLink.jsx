@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { twMerge } from "tailwind-merge";
 
 /**
  * @typedef {Object} WideLinkProps
@@ -19,10 +20,12 @@ import { Link } from "react-router-dom";
  * @param {WideLinkProps} props
  */
 export default function WideLink({ to, href, children, className = "", ...props }) {
+  const classes = twMerge(wideButtonClassNames, className);
+
   return to ? (
     <Link
       to={to}
-      className={`${wideButtonClassNames} ${className}`}
+      className={`${wideButtonClassNames} ${classes}`}
       {...props}
     >
       {children}
@@ -30,7 +33,7 @@ export default function WideLink({ to, href, children, className = "", ...props 
   ) : (
     <a
       href={href}
-      className={`${wideButtonClassNames} ${className}`}
+      className={`${wideButtonClassNames} ${classes}`}
       {...props}
     >
       {children}

@@ -1,16 +1,16 @@
+import Heading from "./Heading";
+
 export default function Daffodils() {
   return (
     <article className="flex flex-col gap-6">
-      <h1 className="font-header text-dark-pink font-bold text-3xl">Daffodils</h1>
+      <Heading>Daffodils</Heading>
       <p className="text-text-light">
         A historical romance fantasy following the life of the one fallen from grace.
       </p>
 
       <div className="flex flex-row gap-4">
         <section className="flex flex-col gap-4">
-          <h2 className="font-header text-dark-pink font-bold text-2xl tracking-[.42rem]">
-            Books in the Series
-          </h2>
+          <Heading className="text-2xl  tracking-[0.4rem]">Books in the Series</Heading>
           <BookDetail
             title="Book 1: The Fall"
             description="A story of betrayal and the fall from grace that changes everything."
@@ -28,7 +28,7 @@ export default function Daffodils() {
         </section>
 
         <section className="flex flex-col gap-4">
-          <h2 className="font-bold text-2xl text-dark-pink">Listen to the Playlist</h2>
+          <Heading className="text-2xl font-body">Listen to the Playlist</Heading>
           <p className="text-text-dark">Here is a playlist inspired by the themes of Daffodils:</p>
           <iframe
             style={{ borderRadius: "12px" }}
@@ -49,7 +49,7 @@ export default function Daffodils() {
 function BookDetail({ title, description }) {
   return (
     <div className="border-l-2 border-dark-pink pl-3 flex flex-col gap-4 py-4">
-      <h3 className="font-header text-dark-pink font-bold text-xl">{title}</h3>
+      <Heading className="text-xl">{title}</Heading>
       <p className="text-text-dark">{description}</p>
     </div>
   );
