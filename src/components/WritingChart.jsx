@@ -11,7 +11,6 @@ import {
 import { Line } from "react-chartjs-2";
 import { months, years } from "../lib/chart_data";
 import { useMemo } from "react";
-import "../styles/homePage.css";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
@@ -85,13 +84,12 @@ function getYearData() {
   };
 }
 
-export default function WritingChart() {
+export function MonthlyChart() {
   const monthData = useMemo(getMonthsData, []);
-  const yearData = useMemo(getYearData, []);
 
   return (
-    <>
-      <h1 className="chart-title">past year writing stats</h1>
+    <div>
+      <Header>past year writing stats</Header>
       <Line
         options={{
           responsive: true,
@@ -105,7 +103,16 @@ export default function WritingChart() {
         width="100%"
         height="70%"
       ></Line>
-      <h1 className="chart-title">past years writing stats</h1>
+    </div>
+  );
+}
+
+export function AnnualChart() {
+  const yearData = useMemo(getYearData, []);
+
+  return (
+    <div>
+      <Header>past years writing stats</Header>
       <Line
         options={{
           responsive: true,
@@ -119,6 +126,10 @@ export default function WritingChart() {
         width="100%"
         height="70%"
       ></Line>
-    </>
+    </div>
   );
+}
+
+function Header({ children }) {
+  return <h1 className="font-header text-3xl mb-8 font-bold text-text-light tracking-widest">{children}</h1>;
 }

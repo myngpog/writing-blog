@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 
 import Sidebar from "./components/SideBar";
@@ -16,9 +16,9 @@ export default function App() {
   return (
     <>
       <Header quote={quote} />
-      <div className="home-container">
+      <div className="flex flex-row gap-22 ml-6 mr-15 home-container">
         <Sidebar />
-        <div className="page-content">
+        <div className="flex-1 mt-14">
           <Outlet />
         </div>
       </div>

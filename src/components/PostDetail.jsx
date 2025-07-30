@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import "../styles/posts.css";
-
 
 const PostDetail = () => {
   const { id } = useParams();
@@ -9,7 +7,9 @@ const PostDetail = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://public-api.wordpress.com/rest/v1.1/sites/pingpengpongpog.wordpress.com/posts/${id}`)
+    fetch(
+      `https://public-api.wordpress.com/rest/v1.1/sites/pingpengpongpog.wordpress.com/posts/${id}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setPost(data);
@@ -28,18 +28,17 @@ const PostDetail = () => {
   const formattedDate = new Date(post.date).toLocaleDateString();
 
   return (
-    <div className="home-container">
-      <div className="post-detail-container">
-        <div className="post-header">
-          <div className="title-and-line">
-            <h3 className="about-me blog-header">{post.title}</h3>
-            <hr className="line-bruh" />
-          </div>
-          <span className="post-date">{formattedDate}</span>
-        </div>
-        <div className = "post-excerpt post-body" dangerouslySetInnerHTML={{ __html: post.content }} />
+    <article className="flex flex-col flex-1">
+      <div className="flex flex-row justify-between mb-8 items-center">
+        <h1 className="text-4xl font-header text-dark-pink tracking-[0.2rem]">{post.title}</h1>
+        <div className="flex-1 border-t mx-3 border-[#ccc]" />
+        <span className="text-gray-500 text-sm">{formattedDate}</span>
       </div>
-    </div>
+      <div
+        className="text-text-light"
+        dangerouslySetInnerHTML={{ __html: post.content }}
+      />
+    </article>
   );
 };
 
