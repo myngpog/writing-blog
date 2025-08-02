@@ -1,15 +1,12 @@
-import "../theme.css";
-import "../styles/projects.css";
-
+import Heading from "./Heading";
 
 export default function Vth() {
-    return (
-      <div className="home-container">
-        <div className="project-title">
-            <h1>Vth</h1>
-            <p className="project-description">A superhero sci-fi following five teens... project under development!</p>
-        </div>
-      </div>
-    );
-  }
-  
+  return (
+    <article className="flex flex-col gap-4">
+      <Heading className="text-4xl">Vth</Heading>
+      <p className="text-text-light">
+        A superhero sci-fi following five teens... project under development!
+      </p>
+    </article>
+  );
+}

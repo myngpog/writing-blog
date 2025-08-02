@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.11",
     "axios": "^1.10.0",
     "chart.js": "^4.5.0",
     "react": "^19.1.0",
@@ -17,6 +18,8 @@
     "react-dom": "^19.1.0",
     "react-router": "^7.6.3",
     "react-router-dom": "^7.6.3",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^4.1.11",
     "toml": "^3.0.0"
   },
   "devDependencies": {

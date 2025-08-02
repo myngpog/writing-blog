@@ -1,24 +1,19 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
 import Sidebar from "./components/SideBar";
-import Header from "./components/Header";
+import Banner from "./components/Banner";
 import quotes from "../public/assets/quotes";
 
 export default function App() {
-  const [quote, setQuote] = useState("");
-
-  useEffect(() => {
-    const random = quotes[Math.floor(Math.random() * quotes.length)];
-    setQuote(random);
-  }, []);
+  const [quote] = useState(() => quotes[Math.floor(Math.random() * quotes.length)]);
 
   return (
     <>
-      <Header quote={quote} />
-      <div className="home-container">
+      <Banner quote={quote} />
+      <div className="flex flex-col md:flex-row justify-center items-center gap-10 xl:gap-22 ml-6 mr-6 xl:mr-15">
         <Sidebar />
-        <div className="page-content">
+        <div className="flex-1 md:mt-14">
           <Outlet />
         </div>
       </div>

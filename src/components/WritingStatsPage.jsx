@@ -1,13 +1,10 @@
-import WritingChart from "./WritingChart";
-import "../styles/homePage.css"
-import "../styles/writingStatsPage.css";
+import { AnnualChart, MonthlyChart } from "./WritingChart";
 
 export default function WritingStatsPage() {
   return (
-    <div className="home-container">
-      <main className="chart-container">
-        <WritingChart />
-      </main>
-    </div>
+    <article className="flex-1 flex flex-col gap-8 mb-16">
+      <MonthlyChart />
+      <AnnualChart />
+    </article>
   );
 }

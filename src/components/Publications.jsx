@@ -1,10 +1,9 @@
-import React from "react";
-import "../styles/publication.css";
+import Heading from "./Heading";
 
 export default function Publication() {
   return (
-    <div className="publication-container">
-      <h1>Publications pending...</h1>
-    </div>
+    <article>
+      <Heading className="text-3xl">Publications pending...</Heading>
+    </article>
   );
 }
