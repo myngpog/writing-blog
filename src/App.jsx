@@ -11,7 +11,7 @@ export default function App() {
   return (
     <>
       <Banner quote={quote} />
-      <div className="flex flex-col md:flex-row justify-center items-center gap-10 xl:gap-22 ml-6 mr-6 xl:mr-15">
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-10 xl:gap-22 ml-6 mr-6 xl:mr-15">
         <Sidebar />
         <div className="flex-1 md:mt-14">
           <Outlet />
