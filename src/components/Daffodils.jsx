@@ -29,7 +29,7 @@ export default function Daffodils() {
 
         <section className="flex flex-col gap-4">
           <Heading className="text-2xl font-body">Listen to the Playlist</Heading>
-          <p className="text-text-dark">Here is a playlist inspired by the themes of Daffodils:</p>
+          <p className="text-text-dark">A playlist inspired by the world of Daffodils!</p>
           <iframe
             style={{ borderRadius: "12px" }}
             src="https://open.spotify.com/embed/playlist/7gWTaXvb8NDDPjKJkzTuDC?utm_source=generator"
