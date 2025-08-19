@@ -9,25 +9,15 @@ export default function Daffodils() {
       </p>
 
       <div className="flex flex-row gap-4">
-        <section className="flex flex-col gap-4">
+        {/* <section className="flex flex-col gap-4">
           <Heading className="text-2xl  tracking-[0.4rem]">Books in the Series</Heading>
           <BookDetail
-            title="Book 1: The Fall"
-            description="A story of betrayal and the fall from grace that changes everything."
+            title="Book 1: Drowning in Daffodils"
+            description=""
           />
-          <BookDetail
-            title="Book 2: Rising Again"
-            description="As the protagonist struggles to reclaim her reputation, new challenges arise."
-          />
-          <BookDetail
-            title="Book 3: Redemption"
-            description="
-              In this final chapter, the protagonist seeks redemption and love, but at a great cost.
-            "
-          />
-        </section>
+        </section> */}
 
-        <section className="flex flex-col gap-4">
+        {/* <section className="flex flex-col gap-4">
           <Heading className="text-2xl font-body">Listen to the Playlist</Heading>
           <p className="text-text-dark">A playlist inspired by the world of Daffodils!</p>
           <iframe
@@ -40,7 +30,7 @@ export default function Daffodils() {
             loading="lazy"
             title="Daffodils Playlist"
           ></iframe>
-        </section>
+        </section> */}
       </div>
     </article>
   );
