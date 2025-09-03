@@ -99,6 +99,14 @@ export function MonthlyChart() {
               position: "bottom",
             },
           },
+          scales: {
+            y: {
+              title: {
+                display: true,
+                text: "Word Count",
+              },
+            },
+          },
         }}
         data={monthData}
         width="100%"
@@ -120,6 +128,14 @@ export function AnnualChart() {
           plugins: {
             legend: {
               position: "bottom",
+            },
+          },
+          scales: {
+            y: {
+              title: {
+                display: true,
+                text: "Word Count",
+              },
             },
           },
         }}
