@@ -1,0 +1,4 @@
+[0] # Incrementing id in brackets. PDF file name should be the same id zero-padded to 4 digits
+title = "title in quotes"
+desc = "description in quotes"
+date = "2025-09-04"            # YYYY-MM-DD in quotes
