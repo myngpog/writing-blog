@@ -1,4 +1,4 @@
 [0] # Incrementing id in brackets. PDF file name should be the same id zero-padded to 4 digits
 title = "On First Impressions"
-desc = "My introduction on the blog, my choices, and thoughts on first impressions."
+desc = "My introduction to the blog, my choices, and thoughts on first impressions."
 date = "2025-09-04"            # YYYY-MM-DD in quotes
