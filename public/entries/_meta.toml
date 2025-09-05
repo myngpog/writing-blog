@@ -1,4 +1,5 @@
-[0] # Incrementing id in brackets. PDF file name should be the same id zero-padded to 4 digits
+[0] # Incrementing id in brackets. Image dir should be the same id zero-padded to 4 digits
 title = "On First Impressions"
 desc = "My introduction to the blog, my choices, and thoughts on first impressions."
-date = "2025-09-04"            # YYYY-MM-DD in quotes
+date = "2025-09-04"     # YYYY-MM-DD in quotes
+files = ["0", "1", "2"] # Each image's number suffix in order. Ex: IMG_4182.jpg -> "4182"
