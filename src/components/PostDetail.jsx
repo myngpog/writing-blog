@@ -1,46 +1,32 @@
-import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Heading from "./Heading";
+import blogMetas from "../lib/blog_meta";
 
-const PostDetail = () => {
+export default function PostDetail() {
   const { id } = useParams();
-  const [post, setPost] = useState(null);
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetch(
-      `https://public-api.wordpress.com/rest/v1.1/sites/pingpengpongpog.wordpress.com/posts/${id}`
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setPost(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Error fetching post:", err);
-        setLoading(false);
-      });
-  }, [id]);
+  const meta = blogMetas[Number(id)];
+  const fileName = id.padStart(4, "0");
+  const filePath = `/entries/${fileName}.pdf`;
 
-  if (loading) {
-    return <p>Loading post...</p>;
-  }
-
-  const formattedDate = new Date(post.date).toLocaleDateString();
+  const date = new Date(meta.date).toLocaleDateString();
 
   return (
     <article className="flex flex-col flex-1">
       <div className="flex flex-row justify-between mb-8 items-center">
-        <Heading className="text-4xl tracking-wide font-medium">{post.title}</Heading>
+        <Heading className="text-4xl tracking-wide font-medium">{meta.title}</Heading>
         <div className="flex-1 border-t mx-3 border-gray-300" />
-        <span className="text-gray-500 text-sm">{formattedDate}</span>
+        <span className="text-gray-500 text-sm">{date}</span>
       </div>
-      <div
-        className="text-text-light"
-        dangerouslySetInnerHTML={{ __html: post.content }}
-      />
+      <object
+        data={filePath}
+        type="application/pdf"
+        height="600px"
+      >
+        <p>
+          PDF cannot be displayed. <a href={filePath}>Download it here.</a>
+        </p>
+      </object>
     </article>
   );
-};
-
-export default PostDetail;
+}
