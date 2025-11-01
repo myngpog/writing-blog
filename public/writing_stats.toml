@@ -9,3 +9,15 @@ month = 8
 year = 2025
 fanfiction = 5200
 novel = 0
+
+[[word_count]]
+month = 9
+year = 2025
+fanfiction = 5200
+novel = 1000
+
+[[word_count]]
+month = 10
+year = 2025
+fanfiction = 8700
+novel = 9000
