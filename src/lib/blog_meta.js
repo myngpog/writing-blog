@@ -7,7 +7,8 @@ const rawBlogMeta = await (await fetch("/entries/_meta.toml")).text();
  * @property {string} title
  * @property {string} desc
  * @property {string} date
- * @property {string[]} files
+ * @property {string[] | undefined} files
+ * @property {string | undefined} markdown
  */
 /** @type {Metadata[]} */
 // We don't actually use each object's key as the id, it's more of a note to keep track of where
