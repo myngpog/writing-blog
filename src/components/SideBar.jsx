@@ -55,8 +55,8 @@ function Navigation({ className = "" }) {
         <Link to="/projects/vth">Vth</Link>
       </WideDropdown>
       <WideDropdown text="Fanfiction">
-        <Link to="/projects/ttaw">Hansy - the thing about war</Link>
-        <Link to="/projects/tqom">Jelsa - this queen of mine</Link>
+        <Link to="/projects/ttaw">the thing about war</Link>
+        <Link to="/projects/tqom">this queen of mine</Link>
       </WideDropdown>
 
       <div className="flex flex-row justify-center items-center gap-2 m-1">

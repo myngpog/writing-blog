@@ -15,6 +15,9 @@ export default function Ttaw() {
         <br />
         <br />
         Until one day, he's sitting across from her in her dreary, cold office, her white coat badge reading: Dr. Pansy A. Parkinson.
+        <br />
+        <br />
+        [Hansy Post Wizarding War AU]
       </p>
     </article>
   );
