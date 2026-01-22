@@ -51,8 +51,12 @@ function Navigation({ className = "" }) {
       <WideLink to="/stats">Writing Stats</WideLink>
       <WideLink to="/publications">Publications</WideLink>
       <WideDropdown text="Projects">
-        <Link to="/daffodils">Daffodils</Link>
-        <Link to="/vth">Vth</Link>
+        <Link to="/projects/daffodils">Daffodils</Link>
+        <Link to="/projects/vth">Vth</Link>
+      </WideDropdown>
+      <WideDropdown text="Fanfiction">
+        <Link to="/projects/ttaw">Hansy - the thing about war</Link>
+        <Link to="/projects/tqom">Jelsa - this queen of mine</Link>
       </WideDropdown>
 
       <div className="flex flex-row justify-center items-center gap-2 m-1">

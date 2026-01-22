@@ -7,8 +7,10 @@ import PostsPage from "./components/PostsPage";
 import Publications from "./components/Publications";
 import WritingStatsPage from "./components/WritingStatsPage";
 import PostDetail from "./components/PostDetail";
-import Daffodils from "./components/Daffodils";
-import Vth from "./components/Vth";
+import Daffodils from "./components/projects/Daffodils";
+import Vth from "./components/projects/Vth";
+import Ttaw from "./components/projects/ttaw";
+import Tqom from "./components/projects/tqom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -17,9 +19,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route index element={<HomePage />} />
         <Route path="posts" element={<PostsPage />} />
         <Route path="stats" element={<WritingStatsPage />} />
-        <Route path="daffodils" element={<Daffodils />} />
-        <Route path="vth" element={<Vth />} />
         <Route path="publications" element={<Publications />}/>
+        <Route path="projects/daffodils" element={<Daffodils />} />
+        <Route path="projects/vth" element={<Vth />} />
+        <Route path="projects/ttaw" element={<Ttaw />} />
+        <Route path="projects/tqom" element={<Tqom />} />
         <Route path="posts/:id" element={<PostDetail />} />
       </Route>
     </Routes>
