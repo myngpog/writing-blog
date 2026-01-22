@@ -5,7 +5,7 @@ export default function Ttaw() {
     <article className="flex flex-col gap-4">
       <Heading className="text-4xl">the thing about war</Heading>
       <p className="text-text-light">
-        <a href="https://archiveofourown.org/works/69667886/chapters/180739381" target="_blank" rel="noopener noreferrer" className="underline">Read on AO3!</a>
+        <a href="https://archiveofourown.org/works/69667886/chapters/180739381" target="_blank" rel="noopener noreferrer" className="underline hover:text-main-accent">Read on AO3!</a>
         <br />
         <br />
         Harry Potter thought that his life would begin after Voldemort was dead. But he was naive, and dead wrong. It's been almost a decade since the Second Wizarding War ended—since he became the hero the prophecy said he would be. But no one truly wins in a war. No witch or wizard at Hogwarts—or even Britain—came out of it unscathed. Everyone lost something, no matter which side they were on. But as the chosen one—as the goddamn hero of the story—wasn’t it his right to be the exception?
