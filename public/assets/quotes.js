@@ -22,7 +22,15 @@ const quotes = [
     "\"It's a wonderful day to be alive.\"",
     "None of their infinitesimally small problems matter here.",
     "it isn’t all too bad, if he were to spend the rest of his life running after her",
-    "he wonders if he’ll get to see her in the rest of the shades and colors of the world."
+    "he wonders if he’ll get to see her in the rest of the shades and colors of the world.",
+    "People want to find the meaning to everything, that's the disease of our age.",
+    "It’s too late now, but she deserves, at the very least, to know she never felt anything alone.",
+    "Now it’s my turn to wander for eternity.",
+    "He can’t take back what he’s said. She can’t take back who she is.",
+    "Being in love is the loneliest thing in the world",
+    "If I write what I feel, it's to reduce the fever of feeling.",
+    "In dreams I’ve achieved everything.",
+    "If you want to get away with lying, first change the language."
 ];
 
 export default quotes;
