@@ -39,7 +39,7 @@ export default function PostDetail() {
       </div>
       <div className="flex flex-col gap-3">
         {markdown && (
-          <div>
+          <div className="text-text-light">
             <Markdown remarkPlugins={[remarkGfm]}>{markdown}</Markdown>
           </div>
         )}
