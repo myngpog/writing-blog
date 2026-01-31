@@ -65,26 +65,33 @@ function Navigation({ className = "" }) {
       </div>
 
       <WideLink
+        href="https://mynguyen.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Tech
+      </WideLink>
+      <WideLink
         href="https://www.archiveofourown.org/users/coffeeinthemorning/profile"
         target="_blank"
         rel="noopener noreferrer"
       >
         AO3
       </WideLink>
-      <WideLink
-        href="https://youtube.com/@notmymi?si=GjfiNXZXtMmP9-7M"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        YouTube
-      </WideLink>
-      <WideLink
-        href="https://youtube.com/channel/UC99cIKMRn7-zBX1EqBCmIEA"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Art YouTube
-      </WideLink>
+      <WideDropdown text="YouTube">
+        <Link
+          to="https://youtube.com/@notmymi?si=GjfiNXZXtMmP9-7M"
+          target="_blank"
+        >
+          Main
+        </Link>
+        <Link
+          to="https://youtube.com/channel/UC99cIKMRn7-zBX1EqBCmIEA"
+          target="_blank"
+        >
+          Art
+        </Link>
+      </WideDropdown>
       <WideLink
         href="https://pingpeng.carrd.co/"
         target="_blank"
