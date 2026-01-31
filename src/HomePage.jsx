@@ -35,6 +35,17 @@ export default function HomePage() {
           </li>
           <li>
             <Link
+              to="/projects/vth"
+              className="text-lg underline mr-2.5 hover:text-red-300"
+            >
+              The Boy Holding Up The World
+            </Link>
+            <span className=" text-dark-pink-button">
+              A contemporary sci-fi novel; currently DRAFTING
+            </span>
+          </li>
+          <li>
+            <Link
               to="/projects/ttaw"
               className="text-lg underline mr-2.5 hover:text-red-300"
             >
