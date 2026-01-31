@@ -6,6 +6,7 @@ import blogMetas from "../lib/blog_meta";
 import Markdown, { MarkdownAsync } from "react-markdown";
 import { useEffect, useState } from "react";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
 export default function PostDetail() {
   const { id } = useParams();
@@ -13,7 +14,10 @@ export default function PostDetail() {
 
   const meta = blogMetas[Number(id)];
 
-  const filePaths = meta.files && idPadded ? generateFilePaths(idPadded, meta.files) : undefined;
+  const filePaths =
+    meta.files && idPadded
+      ? generateFilePaths(idPadded, meta.files)
+      : undefined;
 
   const [markdown, setMarkdown] = useState("");
   useEffect(
@@ -23,7 +27,7 @@ export default function PostDetail() {
         .then((f) => f.text())
         .then((md) => setMarkdown(md));
     },
-    [idPadded, meta.markdown]
+    [idPadded, meta.markdown],
   );
 
   const date = new Date(meta.date).toLocaleDateString();
@@ -33,25 +37,25 @@ export default function PostDetail() {
   return (
     <article className="flex flex-col flex-1">
       <div className="flex flex-row justify-between mb-8 items-center">
-        <Heading className="text-2xl md:text-3xl tracking-wide font-medium">{meta.title}</Heading>
+        <Heading className="text-2xl md:text-3xl tracking-wide font-medium">
+          {meta.title}
+        </Heading>
         <div className="flex-1 border-t mx-3 border-gray-300" />
         <span className="text-gray-500 text-sm">{date}</span>
       </div>
       <div className="flex flex-col gap-3">
         {markdown && (
           <div className="text-text-light">
-            <Markdown remarkPlugins={[remarkGfm]}>{markdown}</Markdown>
+            <Markdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]}>
+              {markdown}
+            </Markdown>
           </div>
         )}
 
         {filePaths && (
           <div className="md:h-[65vh] overflow-auto">
             {filePaths.map((filePath) => (
-              <img
-                src={filePath}
-                alt="Post page"
-                loading="lazy"
-              />
+              <img src={filePath} alt="Post page" loading="lazy" />
             ))}
           </div>
         )}
