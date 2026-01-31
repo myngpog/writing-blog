@@ -6,6 +6,6 @@ files = ["0", "1", "2"] # Each image's number suffix in order. Ex: IMG_4182.jpg 
 # markdown = "post.md"  # File name, assumes it'll be in the same dir used for images
 [1]
 title = "the first day of the last time"
-desc = "A small tangent on living the first day of my last semseter of undergrad"
+desc = "A small tangent on living the first day of my last semester of undergrad."
 date = "2026-01-30"
-files = "01.md"
+markdown = "01.md"
