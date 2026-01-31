@@ -4,4 +4,8 @@ desc = "A blog introduction, my choices, and my thoughts on first impressions."
 date = "2025-09-04"     # YYYY-MM-DD in quotes
 files = ["0", "1", "2"] # Each image's number suffix in order. Ex: IMG_4182.jpg -> "4182"
 # markdown = "post.md"  # File name, assumes it'll be in the same dir used for images
-
+[1]
+title = "the first day of the last time"
+desc = "A small tangent on living the first day of my last semseter of undergrad"
+date = "2026-01-30"
+files = "01.md"

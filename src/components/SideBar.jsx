@@ -49,8 +49,7 @@ function Navigation({ className = "" }) {
     <nav className={twMerge("flex flex-col w-full gap-2 ", className)}>
       <WideLink to="/posts">Blog</WideLink>
       <WideLink to="/stats">Writing Stats</WideLink>
-      <WideLink to="/publications">Publications</WideLink>
-      <WideDropdown text="Projects">
+      <WideDropdown text="Publications" to="/publications">
         <Link to="/projects/daffodils">Daffodils</Link>
         <Link to="/projects/vth">Vth</Link>
       </WideDropdown>

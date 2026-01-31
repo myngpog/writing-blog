@@ -9,8 +9,8 @@ import WritingStatsPage from "./components/WritingStatsPage";
 import PostDetail from "./components/PostDetail";
 import Daffodils from "./components/projects/Daffodils";
 import Vth from "./components/projects/Vth";
-import Ttaw from "./components/projects/ttaw";
-import Tqom from "./components/projects/tqom";
+import Ttaw from "./components/fanfiction/ttaw";
+import Tqom from "./components/fanfiction/tqom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>

@@ -24,7 +24,7 @@ export default function HomePage() {
         <ul className="list-disc pl-10 text-text-light">
           <li>
             <Link
-              to="/daffodils"
+              to="/projects/daffodils"
               className="text-lg underline mr-2.5 hover:text-red-300"
             >
               Wait Where the Daffodils Bloom
@@ -34,8 +34,22 @@ export default function HomePage() {
             </span>
           </li>
           <li>
-            <span className="text-lg mr-2.5">a day, a night; winter</span>
-            <span className="text-dark-pink-button">A(n angsty) Hansy fanfic WIP</span>
+            <Link
+              to="/projects/ttaw"
+              className="text-lg underline mr-2.5 hover:text-red-300"
+            >
+              the thing about war,
+            </Link>
+            <span className="text-dark-pink-button">A(n angsty) Hansy fic</span>
+          </li>
+          <li>
+            <Link
+              to="/projects/tqom"
+              className="text-lg underline mr-2.5 hover:text-red-300"
+            >
+              this queen of mine
+            </Link>
+            <span className="text-dark-pink-button">A fantasy Jelsa fic</span>
           </li>
         </ul>
       </section>
