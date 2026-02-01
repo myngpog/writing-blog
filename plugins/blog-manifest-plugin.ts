@@ -82,7 +82,10 @@ export function blogManifestPlugin(blogDir: string): Plugin {
         }
       });
 
-      return `export const postMetas = ${JSON.stringify(await Promise.all(postMetas))};`;
+      const pM = await Promise.all(postMetas);
+      pM.sort((a, b) => a.id.localeCompare(b.id));
+
+      return `export const postMetas = ${JSON.stringify(pM)};`;
     },
   };
 }
