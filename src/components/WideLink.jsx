@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { twMerge } from "tailwind-merge";
+import { Link } from 'react-router-dom';
+import { twMerge } from 'tailwind-merge';
 
 /**
  * @typedef {Object} WideLinkProps
@@ -19,27 +19,25 @@ import { twMerge } from "tailwind-merge";
  *
  * @param {WideLinkProps} props
  */
-export default function WideLink({ to, href, children, className = "", ...props }) {
+export default function WideLink({
+  to,
+  href,
+  children,
+  className = '',
+  ...props
+}) {
   const classes = twMerge(wideButtonClassNames, className);
 
   return to ? (
-    <Link
-      to={to}
-      className={`${wideButtonClassNames} ${classes}`}
-      {...props}
-    >
+    <Link to={to} className={`${wideButtonClassNames} ${classes}`} {...props}>
       {children}
     </Link>
   ) : (
-    <a
-      href={href}
-      className={`${wideButtonClassNames} ${classes}`}
-      {...props}
-    >
+    <a href={href} className={`${wideButtonClassNames} ${classes}`} {...props}>
       {children}
     </a>
   );
 }
 
 export const wideButtonClassNames =
-  "bg-dark-pink-button text-white rounded-md text-center py-1.5 hover:bg-transparent border border-dark-pink-button transition-colors duration-300 hover:text-dark-pink";
+  'bg-dark-pink-button text-white rounded-md text-center py-1.5 hover:bg-transparent border border-dark-pink-button transition-colors duration-300 hover:text-dark-pink';

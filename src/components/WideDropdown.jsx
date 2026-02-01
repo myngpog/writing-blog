@@ -1,4 +1,4 @@
-import { wideButtonClassNames } from "./WideLink";
+import { wideButtonClassNames } from './WideLink';
 
 export default function WideDropdown({ children, text }) {
   return (

@@ -1,4 +1,4 @@
-import { AnnualChart, MonthlyChart } from "./WritingChart";
+import { AnnualChart, MonthlyChart } from './WritingChart';
 
 export default function WritingStatsPage() {
   return (

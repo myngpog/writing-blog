@@ -1,16 +1,16 @@
 // @ts-check
+import { useEffect, useState } from 'react';
+import Markdown, { MarkdownAsync } from 'react-markdown';
+import { useParams } from 'react-router-dom';
+import rehypeRaw from 'rehype-raw';
+import remarkGfm from 'remark-gfm';
 
-import { useParams } from "react-router-dom";
-import Heading from "./Heading";
-import blogMetas from "../lib/blog_meta";
-import Markdown, { MarkdownAsync } from "react-markdown";
-import { useEffect, useState } from "react";
-import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
+import blogMetas from '../lib/blog_meta';
+import Heading from './Heading';
 
 export default function PostDetail() {
   const { id } = useParams();
-  const idPadded = id?.padStart(4, "0");
+  const idPadded = id?.padStart(4, '0');
 
   const meta = blogMetas[Number(id)];
 
@@ -19,7 +19,7 @@ export default function PostDetail() {
       ? generateFilePaths(idPadded, meta.files)
       : undefined;
 
-  const [markdown, setMarkdown] = useState("");
+  const [markdown, setMarkdown] = useState('');
   useEffect(
     function fetchMarkdown() {
       if (!idPadded || !meta.markdown) return;
@@ -27,7 +27,7 @@ export default function PostDetail() {
         .then((f) => f.text())
         .then((md) => setMarkdown(md));
     },
-    [idPadded, meta.markdown],
+    [idPadded, meta.markdown]
   );
 
   const date = new Date(meta.date).toLocaleDateString();

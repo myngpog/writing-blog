@@ -1,20 +1,25 @@
-import { Link } from "react-router-dom";
-import Heading from "./components/Heading";
+import { Link } from 'react-router-dom';
+
+import Heading from './components/Heading';
 
 export default function HomePage() {
   return (
     <main className="flex flex-col items-center flex-1 gap-1 about-section">
       <section className="w-full pb-4">
-        <Heading className="pb-5 tracking-[0.2rem] lg:tracking-[0.42rem]">about</Heading>
+        <Heading className="pb-5 tracking-[0.2rem] lg:tracking-[0.42rem]">
+          about
+        </Heading>
         <p className="pl-3 border-l text-text-light text-justify text-lg border-dark-pink blurb">
-          M.K. (My) Nguyen is a Vietnamese American writer from southern California. When she's not
-          busy keeping up with the world and caring a little too much about her social life, she
-          spends the rest of her time in her head.
+          M.K. (My) Nguyen is a Vietnamese American writer from southern
+          California. When she's not busy keeping up with the world and caring a
+          little too much about her social life, she spends the rest of her time
+          in her head.
           <br></br>
           <br></br>
-          She enjoys writing about troubled (she likes to call them complex) characters and their
-          navigation of the intricate worlds they exist in. She also likes to collect quotes and
-          wastes too much money at tea and coffee shops.
+          She enjoys writing about troubled (she likes to call them complex)
+          characters and their navigation of the intricate worlds they exist in.
+          She also likes to collect quotes and wastes too much money at tea and
+          coffee shops.
         </p>
       </section>
       <section className="w-full">

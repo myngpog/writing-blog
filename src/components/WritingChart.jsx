@@ -7,35 +7,57 @@ import {
   Title,
   Tooltip,
   Legend,
-} from "chart.js";
-import { Line } from "react-chartjs-2";
-import { months, years } from "../lib/chart_data";
-import { useMemo } from "react";
-import Heading from "./Heading";
+} from 'chart.js';
+import { useMemo } from 'react';
+import { Line } from 'react-chartjs-2';
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+import { months, years } from '../lib/chart_data';
+import Heading from './Heading';
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 function getMonthsData() {
   return {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    labels: [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ],
     datasets: [
       {
-        label: "Fanfiction",
+        label: 'Fanfiction',
         data: months.map(({ fanfiction }) => fanfiction),
-        borderColor: "#df7f7c",
-        backgroundColor: "#df7f7c",
+        borderColor: '#df7f7c',
+        backgroundColor: '#df7f7c',
       },
       {
-        label: "Novel",
+        label: 'Novel',
         data: months.map(({ novel }) => novel),
-        borderColor: "rgb(159, 110, 104)",
-        backgroundColor: "rgb(159, 110, 104)",
+        borderColor: 'rgb(159, 110, 104)',
+        backgroundColor: 'rgb(159, 110, 104)',
       },
       {
-        label: "Everything",
+        label: 'Everything',
         data: months.map(({ fanfiction, novel }) => fanfiction + novel),
-        borderColor: "rgb(201, 163, 93)",
-        backgroundColor: "rgb(201, 163, 93)",
+        borderColor: 'rgb(201, 163, 93)',
+        backgroundColor: 'rgb(201, 163, 93)',
       },
     ],
   };
@@ -64,22 +86,22 @@ function getYearData() {
     labels,
     datasets: [
       {
-        label: "Fanfiction",
+        label: 'Fanfiction',
         data: fanfictionData,
-        borderColor: "#df7f7c",
-        backgroundColor: "#df7f7c",
+        borderColor: '#df7f7c',
+        backgroundColor: '#df7f7c',
       },
       {
-        label: "Novel",
+        label: 'Novel',
         data: novelData,
-        borderColor: "rgb(159, 110, 104)",
-        backgroundColor: "rgb(159, 110, 104)",
+        borderColor: 'rgb(159, 110, 104)',
+        backgroundColor: 'rgb(159, 110, 104)',
       },
       {
-        label: "Everything",
+        label: 'Everything',
         data: everythingData,
-        borderColor: "rgb(201, 163, 93)",
-        backgroundColor: "rgb(201, 163, 93)",
+        borderColor: 'rgb(201, 163, 93)',
+        backgroundColor: 'rgb(201, 163, 93)',
       },
     ],
   };
@@ -90,20 +112,22 @@ export function MonthlyChart() {
 
   return (
     <div>
-      <Heading className="mb-8 text-3xl tracking-widest">past year writing stats</Heading>
+      <Heading className="mb-8 text-3xl tracking-widest">
+        past year writing stats
+      </Heading>
       <Line
         options={{
           responsive: true,
           plugins: {
             legend: {
-              position: "bottom",
+              position: 'bottom',
             },
           },
           scales: {
             y: {
               title: {
                 display: true,
-                text: "Word Count",
+                text: 'Word Count',
               },
             },
           },
@@ -121,20 +145,22 @@ export function AnnualChart() {
 
   return (
     <div>
-      <Heading className="mb-8 text-3xl tracking-widest">past years writing stats</Heading>
+      <Heading className="mb-8 text-3xl tracking-widest">
+        past years writing stats
+      </Heading>
       <Line
         options={{
           responsive: true,
           plugins: {
             legend: {
-              position: "bottom",
+              position: 'bottom',
             },
           },
           scales: {
             y: {
               title: {
                 display: true,
-                text: "Word Count",
+                text: 'Word Count',
               },
             },
           },

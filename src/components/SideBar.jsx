@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
-import WideDropdown from "./WideDropdown";
-import WideLink from "./WideLink";
-import Line from "./Line";
-import Heading from "./Heading";
-import { twMerge } from "tailwind-merge";
+import { Link } from 'react-router-dom';
+import { twMerge } from 'tailwind-merge';
+
+import Heading from './Heading';
+import Line from './Line';
+import WideDropdown from './WideDropdown';
+import WideLink from './WideLink';
 
 export default function Sidebar() {
   return (
@@ -44,9 +45,9 @@ export default function Sidebar() {
   );
 }
 
-function Navigation({ className = "" }) {
+function Navigation({ className = '' }) {
   return (
-    <nav className={twMerge("flex flex-col w-full gap-2 ", className)}>
+    <nav className={twMerge('flex flex-col w-full gap-2 ', className)}>
       <WideLink to="/posts">Blog</WideLink>
       <WideLink to="/stats">Writing Stats</WideLink>
       <WideDropdown text="Publications" to="/publications">

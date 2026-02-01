@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
-import Heading from "./Heading";
-import blogMetas from "../lib/blog_meta";
+import { Link } from 'react-router-dom';
+
+import blogMetas from '../lib/blog_meta';
+import Heading from './Heading';
 
 export default function PostsPage() {
   return (

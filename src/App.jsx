@@ -1,12 +1,14 @@
-import { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { useState } from 'react';
+import { Outlet } from 'react-router-dom';
 
-import Sidebar from "./components/SideBar";
-import Banner from "./components/Banner";
-import quotes from "../public/assets/quotes";
+import quotes from '../public/assets/quotes';
+import Banner from './components/Banner';
+import Sidebar from './components/SideBar';
 
 export default function App() {
-  const [quote] = useState(() => quotes[Math.floor(Math.random() * quotes.length)]);
+  const [quote] = useState(
+    () => quotes[Math.floor(Math.random() * quotes.length)]
+  );
 
   return (
     <>

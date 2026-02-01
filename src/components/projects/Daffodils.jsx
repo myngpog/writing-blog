@@ -1,11 +1,12 @@
-import Heading from "../Heading";
+import Heading from '../Heading';
 
 export default function Daffodils() {
   return (
     <article className="flex flex-col gap-6">
       <Heading>Daffodils</Heading>
       <p className="text-text-light">
-        A historical romance fantasy following the life of the one fallen from grace.
+        A historical romance fantasy following the life of the one fallen from
+        grace.
       </p>
 
       <div className="flex flex-row gap-4">

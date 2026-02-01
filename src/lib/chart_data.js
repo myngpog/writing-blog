@@ -1,6 +1,6 @@
-import * as TOML from "toml";
+import * as TOML from 'toml';
 
-const text = await (await fetch("/writing_stats.toml")).text();
+const text = await (await fetch('/writing_stats.toml')).text();
 const entries = TOML.parse(text).word_count.map((obj) => {
   return {
     ...obj,
