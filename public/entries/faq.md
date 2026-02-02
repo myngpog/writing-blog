@@ -47,4 +47,10 @@ priority: 5
     <p className="pl-3 border-l text-text-light text-justify border-dark-pink blurb">
       I'm glad you asked! this is my favorite part about this website; it's simple but on load up, it gives you a random quote from my doc of quotes! it's not public *right now* but if there is interest, then I will add it to this website under a blog post :) 
     </p>
+
+  <div class="font-header mb-[0.4rem] text-lg">why writing statistics?</div>
+    <p className="pl-3 border-l text-text-light text-justify border-dark-pink blurb">
+      Because I like to track it! I think a visual linechart of the word count I write over the years/months is a nice addition. it's what actually motivated me to create my own writing website fyi! However, it is missing blog posts, applications, and academic writing... I'm not really interested in adding that though
+    </p>
+
 </section>
