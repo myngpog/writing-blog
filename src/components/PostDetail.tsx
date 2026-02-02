@@ -4,14 +4,14 @@ import { useParams } from 'react-router-dom';
 import rehypeRaw from 'rehype-raw';
 import remarkFrontmatter from 'remark-frontmatter';
 import remarkGfm from 'remark-gfm';
-import { postMetas } from 'virtual:blog-manifest';
+import { posts } from 'virtual:blog-manifest';
 
 import Heading from './Heading';
 
 export default function PostDetail() {
-  const { id: idParam } = useParams();
+  const { id } = useParams();
 
-  const meta = postMetas[Number(idParam)];
+  const meta = id ? posts[id] : undefined;
 
   const [markdown, setMarkdown] = useState('');
   useEffect(
@@ -34,9 +34,7 @@ export default function PostDetail() {
     (file) => `${blogDir}/IMG_${file}.jpg`
   );
 
-  const date = new Date(meta.date).toLocaleDateString();
-
-  if (!idParam) return null;
+  if (!id) return null;
 
   return (
     <article className="flex flex-col flex-1">
@@ -45,7 +43,11 @@ export default function PostDetail() {
           {meta.title}
         </Heading>
         <div className="flex-1 border-t mx-3 border-gray-300" />
-        <span className="text-gray-500 text-sm">{date}</span>
+        <span className="text-gray-500 text-sm">
+          {new Date(meta.date).toLocaleDateString(undefined, {
+            timeZone: 'UTC',
+          })}
+        </span>
       </div>
       <div className="flex flex-col gap-3">
         {markdown && (

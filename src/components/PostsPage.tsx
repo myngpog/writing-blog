@@ -1,20 +1,24 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { postMetas } from 'virtual:blog-manifest';
+import { posts } from 'virtual:blog-manifest';
 
 import Heading from './Heading';
 
-export default function PostsPage() {
-  const [posts] = useState(() => [...postMetas].reverse());
+const postsArr = Object.values(posts).sort((a, b) => {
+  if (a.priority || b.priority) {
+    return (b.priority ?? 0) - (a.priority ?? 0);
+  }
+  return new Date(b.date).valueOf() - new Date(a.date).valueOf();
+});
 
+export default function PostsPage() {
   return (
     <section className="flex flex-col gap-4">
-      {posts.length === 0 ? (
+      {postsArr.length === 0 ? (
         <h1 className="text-center m-10 text-2xl text-dark-pink">
           No posts yet!
         </h1>
       ) : (
-        posts.map(({ id, title, desc, date }) => (
+        postsArr.map(({ id, title, desc, date }) => (
           <article
             key={id}
             className="flex flex-col border-b border-[rgba(83,64,67,0.473)]"
@@ -24,7 +28,9 @@ export default function PostsPage() {
                 {title}
               </Heading>
               <span className="text-sm text-gray-500">
-                {new Date(date).toLocaleDateString()}
+                {new Date(date).toLocaleDateString(undefined, {
+                  timeZone: 'UTC',
+                })}
               </span>
             </div>
             <p className="text-text-dark">{desc}</p>
