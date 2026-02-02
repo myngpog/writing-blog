@@ -9,6 +9,7 @@ priority: 5
   <h2 class="text-2xl text-text-light font-accent">
     FAQs!
   </h2>
+    <p className="pl-3 border-l text-text-light text-justify border-dark-pink blurb">Feel free to connect and send me any questions you have about myself, hobbies, this website, etc and I will update this blog post :))</p>
   <br />
   <div class="font-accent mb-[0.4rem] text-lg">what do you do outside of writing?</div>
   <p className="pl-3 border-l text-text-light text-justify border-dark-pink blurb">
