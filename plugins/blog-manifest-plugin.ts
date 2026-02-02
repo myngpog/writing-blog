@@ -8,7 +8,7 @@ import z from 'zod';
 const PostMatterSchema = z.object({
   title: z.string(),
   desc: z.string(),
-  date: z.date(),
+  date: z.coerce.date(),
   files: z.string().array().optional(),
   priority: z.number().optional(),
 });
