@@ -2,17 +2,17 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 import matter from 'gray-matter';
-import T, { type Static } from 'typebox';
-import { Value } from 'typebox/value';
 import type { Plugin } from 'vite';
+import z from 'zod';
 
-const PostMatterSchema = T.Object({
-  title: T.String(),
-  desc: T.String(),
-  date: T.String({ format: 'date' }),
-  files: T.Optional(T.Array(T.String())),
+const PostMatterSchema = z.object({
+  title: z.string(),
+  desc: z.string(),
+  date: z.date(),
+  files: z.string().array().optional(),
+  priority: z.number().optional(),
 });
-type PostMatter = Static<typeof PostMatterSchema>;
+type PostMatter = z.infer<typeof PostMatterSchema>;
 
 export type PostMeta = { id: string; fileName: string } & PostMatter;
 
@@ -35,7 +35,7 @@ export function blogManifestPlugin(blogDir: string): Plugin {
 
       const entryDirs = await fs.readdir(fullDir, { withFileTypes: true });
 
-      const postMetas: Promise<PostMeta>[] = entryDirs.map(async (entryDir) => {
+      const promises: Promise<PostMeta>[] = entryDirs.map(async (entryDir) => {
         // Post file is either /public/{postId}/{postId}.md or /public/{postId}.md
         const { postId, postPath } = (() => {
           if (entryDir.isDirectory()) {
@@ -49,7 +49,7 @@ export function blogManifestPlugin(blogDir: string): Plugin {
             };
           }
           return {
-            postId: entryDir.name.slice(0, entryDir.name.length - 3),
+            postId: entryDir.name.slice(0, entryDir.name.length - 3), // trim '.md'
             postPath: path.join(fullDir, entryDir.name),
           };
         })();
@@ -57,17 +57,14 @@ export function blogManifestPlugin(blogDir: string): Plugin {
         const { data } = matter(
           await fs.readFile(postPath).catch((err: unknown) => {
             console.error(
-              `[${pluginName}] Expected markdown file at ${postPath}`,
-              {
-                err,
-              }
+              `[${pluginName}] Expected markdown file at ${postPath}`
             );
-            process.exit(1);
+            throw err;
           })
         );
 
         try {
-          const matter = Value.Parse(PostMatterSchema, data);
+          const matter = PostMatterSchema.parse(data);
 
           return {
             ...matter,
@@ -75,17 +72,19 @@ export function blogManifestPlugin(blogDir: string): Plugin {
             fileName: '/' + path.relative('public', postPath),
           };
         } catch (err) {
-          console.error(`[${pluginName}] Invalid frontmatter in ${postPath}`, {
-            err,
-          });
-          process.exit(1);
+          console.error(`[${pluginName}] Invalid frontmatter in ${postPath}`);
+          throw err;
         }
       });
 
-      const pM = await Promise.all(postMetas);
-      pM.sort((a, b) => a.id.localeCompare(b.id));
+      const metas = await Promise.all(promises);
 
-      return `export const postMetas = ${JSON.stringify(pM)};`;
+      const metasObj = metas.reduce<Record<string, PostMeta>>((obj, meta) => {
+        obj[meta.id] = meta;
+        return obj;
+      }, {});
+
+      return `export const posts = ${JSON.stringify(metasObj)};`;
     },
   };
 }

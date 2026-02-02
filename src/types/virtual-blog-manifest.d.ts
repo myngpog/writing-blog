@@ -5,8 +5,9 @@ interface PostMeta {
   desc: string;
   date: string;
   files?: string[];
+  priority: number;
 }
 
 declare module 'virtual:blog-manifest' {
-  const postMetas: PostMeta[];
+  const posts: Record<string, PostMeta>;
 }

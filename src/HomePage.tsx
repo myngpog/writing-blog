@@ -23,14 +23,14 @@ export default function HomePage() {
           <br></br>
           <br></br>
           <span className="block whitespace-nowrap">
-            Feel free to contact me{" "}
+            Feel free to contact me{' '}
             <a
               href="mailto:pingpengpongpog@email.com"
               className="underline hover:text-red-300"
             >
               here
             </a>
-            , or on{" "}
+            , or on{' '}
             <a
               href="https://tumblr.com/penguinsonicee"
               target="_blank"
