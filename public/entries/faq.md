@@ -55,5 +55,11 @@ priority: 5
     </p>
     <br />
 
+  <div class="font-header mb-[0.4rem] text-lg">what's the publication tab and why are the projects empty?</div>
+    <p className="pl-3 border-l text-text-light text-justify border-dark-pink blurb">
+      The projects are empty as of now because I'm lowkenuinely too lazy to update/work on them lmfao--since this is a website I programmed, I usually change the code whenever there is something i want to change (and with that, comes a lot of bug fixes...). Publications tab is there as I am actually working on querying one of the projects right now! but more on that later...
+    </p>
+    <br />
+
 
 </section>
