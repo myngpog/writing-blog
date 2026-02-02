@@ -20,6 +20,27 @@ export default function HomePage() {
           characters and their navigation of the intricate worlds they exist in.
           She also likes to collect quotes and wastes too much money at tea and
           coffee shops.
+          <br></br>
+          <br></br>
+          <span className="block whitespace-nowrap">
+            Feel free to contact me{" "}
+            <a
+              href="mailto:pingpengpongpog@email.com"
+              className="underline hover:text-red-300"
+            >
+              here
+            </a>
+            , or on{" "}
+            <a
+              href="https://tumblr.com/penguinsonicee"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-red-300"
+            >
+              Tumblr
+            </a>
+            !
+          </span>
         </p>
       </section>
       <section className="w-full">
