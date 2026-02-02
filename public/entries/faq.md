@@ -6,10 +6,11 @@ priority: 5
 ---
 
 <section>
-  <h2 class="text-2xl text-text-light font-accent">
+  <h2 class="text-2xl mb-[0.4rem] text-text-light font-accent">
     FAQs!
   </h2>
-    <p className="pl-3 border-l text-text-light text-justify border-dark-pink blurb">Feel free to connect and send me any questions you have about myself, hobbies, this website, etc and I will update this blog post :))</p>
+    <p className="pl-3 border-l text-text-light text-justify border-dark-pink blurb">
+      Feel free to connect and send me any questions you have about myself, hobbies, this website, etc and I will update this blog post :))</p>
   <br />
   <div class="font-accent mb-[0.4rem] text-lg">what do you do outside of writing?</div>
   <p className="pl-3 border-l text-text-light text-justify border-dark-pink blurb">
@@ -20,8 +21,7 @@ priority: 5
       rel="noopener noreferrer"
       className="underline hover:text-red-300"
   >
-  here
-  </a> if I'm in your area!
+  here</a> if I'm in your area!
   </p>
   <br />
 
@@ -39,9 +39,7 @@ priority: 5
       target="_blank"
       rel="noopener noreferrer"
       className="underline hover:text-red-300"
-  >
-  Jason
-  </a>! unfortunately the repo is privated but if you're interested, feel free to get in touch. 
+  >Jason</a>! unfortunately the repo is privated but if you're interested, feel free to get in touch. 
   </p>
   <br />
 
