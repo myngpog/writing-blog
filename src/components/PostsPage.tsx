@@ -33,7 +33,7 @@ export default function PostsPage() {
                 })}
               </span>
             </div>
-            <p className="text-text-dark">{desc}</p>
+            <p className="text-text-light">{desc}</p>
             <Link
               to={`/posts/${id}`}
               className="my-2 self-end underline text-gray-500 hover:text-red-300"

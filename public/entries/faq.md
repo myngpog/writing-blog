@@ -25,13 +25,13 @@ priority: 5
   </p>
   <br />
 
-  <div class="font-header mb-[0.4rem] text-lg">I'm interested in your novel! can I beta?</div>
+  <div class="font-accent mb-[0.4rem] text-lg">I'm interested in your novel! can I beta?</div>
   <p className="pl-3 border-l text-text-light text-justify border-dark-pink blurb">
     Right now, I'm sending my stuff out to people I trust but feel free to connect and perhaps you can :)
   </p>
   <br />
 
-  <div class="font-header mb-[0.4rem] text-lg">this website is cool, how did you make it?</div>
+  <div class="font-accent mb-[0.4rem] text-lg">this website is cool, how did you make it?</div>
   <p className="pl-3 border-l text-text-light text-justify border-dark-pink blurb">
     I co-programmed it with the help of my awesome friend,
     <a
@@ -43,19 +43,19 @@ priority: 5
   </p>
   <br />
 
-<div class="font-header mb-[0.4rem] text-lg">what is the quotes thing at the top?</div>
+<div class="font-accent mb-[0.4rem] text-lg">what is the quotes thing at the top?</div>
     <p className="pl-3 border-l text-text-light text-justify border-dark-pink blurb">
       I'm glad you asked! this is my favorite part about this website; it's simple but on load up, it gives you a random quote from my doc of quotes! it's not public *right now* but if there is interest, then I will add it to this website under a blog post :) 
     </p>
   <br />
 
-  <div class="font-header mb-[0.4rem] text-lg">why writing statistics?</div>
+  <div class="font-accent mb-[0.4rem] text-lg">why writing statistics?</div>
     <p className="pl-3 border-l text-text-light text-justify border-dark-pink blurb">
       Because I like to track it! I think a visual linechart of the word count I write over the years/months is a nice addition. it's what actually motivated me to create my own writing website fyi! However, it is missing blog posts, applications, and academic writing... I'm not really interested in adding that though
     </p>
     <br />
 
-  <div class="font-header mb-[0.4rem] text-lg">what's the publication tab and why are the projects empty?</div>
+  <div class="font-accent mb-[0.4rem] text-lg">what's the publication tab and why are the projects empty?</div>
     <p className="pl-3 border-l text-text-light text-justify border-dark-pink blurb">
       The projects are empty as of now because I'm lowkenuinely too lazy to update/work on them lmfao--since this is a website I programmed, I usually change the code whenever there is something i want to change (and with that, comes a lot of bug fixes...). Publications tab is there as I am actually working on querying one of the projects right now! but more on that later...
     </p>
