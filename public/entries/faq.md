@@ -27,7 +27,7 @@ priority: 5
 
   <div class="font-accent mb-[0.4rem] text-lg">I'm interested in your novel! can I beta?</div>
   <p className="pl-3 border-l text-text-light text-justify border-dark-pink blurb">
-    Right now, I'm sending my stuff out to people I trust but feel free to connect and perhaps you can :)
+    Thanks so much for your interest! However, right now, I'm sending my stuff out to people I trust but feel free to connect and perhaps you can :)
   </p>
   <br />
 
