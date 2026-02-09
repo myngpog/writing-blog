@@ -5,6 +5,8 @@ import quotes from '../public/assets/quotes';
 import Banner from './components/Banner';
 import Sidebar from './components/SideBar';
 
+import { Analytics } from "@vercel/analytics/next"
+
 export default function App() {
   const [quote] = useState(
     () => quotes[Math.floor(Math.random() * quotes.length)] ?? ''
@@ -19,6 +21,7 @@ export default function App() {
           <Outlet />
         </div>
       </div>
+      <Analytics />
     </>
   );
 }
