@@ -72,13 +72,6 @@ function Navigation({ className }: { className?: string }) {
       >
         Tech
       </WideLink>
-      <WideLink
-        href="https://www.archiveofourown.org/users/coffeeinthemorning/profile"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        AO3
-      </WideLink>
       <WideDropdown text="YouTube">
         <Link
           to="https://youtube.com/@notmymi?si=GjfiNXZXtMmP9-7M"
@@ -93,6 +86,13 @@ function Navigation({ className }: { className?: string }) {
           Art
         </Link>
       </WideDropdown>
+      <WideLink
+        href="https://www.archiveofourown.org/users/coffeeinthemorning/profile"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        AO3
+      </WideLink>
       <WideLink
         href="https://pingpeng.carrd.co/"
         target="_blank"
