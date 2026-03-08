@@ -70,7 +70,7 @@ function Navigation({ className }: { className?: string }) {
         target="_blank"
         rel="noopener noreferrer"
       >
-        KoFi
+        Support my work!
       </WideLink>
       <WideDropdown text="YouTube">
         <Link
