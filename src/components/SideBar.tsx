@@ -66,11 +66,11 @@ function Navigation({ className }: { className?: string }) {
       </div>
 
       <WideLink
-        href="https://mynguyen.vercel.app/"
+        href="https://ko-fi.com/penguinsonice#linkModal/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Tech
+        KoFi
       </WideLink>
       <WideDropdown text="YouTube">
         <Link
