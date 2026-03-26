@@ -21,7 +21,7 @@ priority: 5
       rel="noopener noreferrer"
       className="underline hover:text-red-300"
   >
-  here</a> if I'm in your area!
+  here</a href="https://mynguyen.vercel.app/map" style="color: #755e5e"> if I'm in your area!
   </p>
   <br />
 
