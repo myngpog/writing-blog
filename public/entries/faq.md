@@ -16,12 +16,12 @@ priority: 5
   <p className="pl-3 border-l text-text-light text-justify border-dark-pink blurb">
     outside of writing, I work remote in tech! I'm in school as of now but I will be graduating soon and pursuing a digital nomadic lifestyle for short periods of time. I'm always looking to meet new people so find out 
     <a
-      href="https://mynguyen.vercel.app/"
+      href="https://mynguyen.vercel.app/map"
       target="_blank"
       rel="noopener noreferrer"
       className="underline hover:text-red-300"
   >
-  here</a href="https://mynguyen.vercel.app/map" style="color: #755e5e"> if I'm in your area!
+  here</a> if I'm in your area!
   </p>
   <br />
 
