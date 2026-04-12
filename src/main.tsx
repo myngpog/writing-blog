@@ -8,6 +8,7 @@ import PostsPage from './components/PostsPage';
 import Publications from './components/Publications';
 import WritingStatsPage from './components/WritingStatsPage';
 import Tqom from './components/fanfiction/tqom';
+import Tcl from './components/fanfiction/tcl';
 import Ttaw from './components/fanfiction/ttaw';
 import Daffodils from './components/projects/Daffodils';
 import Vth from './components/projects/Vth';
@@ -24,6 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="projects/vth" element={<Vth />} />
         <Route path="projects/ttaw" element={<Ttaw />} />
         <Route path="projects/tqom" element={<Tqom />} />
+        <Route path="projects/tcl" element={<Tcl />} />
         <Route path="posts/:id" element={<PostDetail />} />
       </Route>
     </Routes>

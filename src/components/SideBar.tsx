@@ -57,6 +57,7 @@ function Navigation({ className }: { className?: string }) {
       <WideDropdown text="Fanfiction">
         <Link to="/projects/ttaw">the thing about war</Link>
         <Link to="/projects/tqom">this queen of mine</Link>
+        <Link to="/projects/tcl">the color lapis</Link>
       </WideDropdown>
 
       <div className="flex flex-row justify-center items-center gap-2 m-1">
