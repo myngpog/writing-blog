@@ -83,15 +83,6 @@ export default function HomePage() {
             </Link>
             <span className="text-dark-pink-button">A fantasy Jelsa fic</span>
           </li>
-          <li>
-            <Link
-              to="/projects/tcl"
-              className="text-lg underline mr-2.5 hover:text-red-300"
-            >
-              the color lapis
-            </Link>
-            <span className="text-dark-pink-button">A historical fantasy Jelsa fic</span>
-          </li>
         </ul>
       </section>
 
