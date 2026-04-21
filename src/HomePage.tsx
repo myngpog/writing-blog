@@ -46,7 +46,7 @@ export default function HomePage() {
       <section className="w-full">
         <Heading className="flex items-center pb-5 tracking-[0.2rem] lg:tracking-[0.42rem]">
           currently writing  <img
-            src="public/assets/penguin-write.gif"
+            src="/assets/penguin-write.gif"
             alt="penguin writing"
             className="h-8 w-8"
           />
