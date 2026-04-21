@@ -72,15 +72,6 @@ export default function HomePage() {
           </li>
           <li>
             <Link
-              to="/projects/ttaw"
-              className="text-lg underline mr-2.5 hover:text-red-300"
-            >
-              the thing about war,
-            </Link>
-            <span className="text-dark-pink-button">A(n angsty) Hansy fic</span>
-          </li>
-          <li>
-            <Link
               to="/projects/tqom"
               className="text-lg underline mr-2.5 hover:text-red-300"
             >
