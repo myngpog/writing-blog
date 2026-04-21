@@ -48,7 +48,7 @@ export default function HomePage() {
           currently writing  <img
             src="/assets/penguin-write.gif"
             alt="penguin writing"
-            className="h-8 w-8"
+            className="h-10 w-10"
           />
         </Heading>
         <ul className="list-disc pl-10 text-text-light">
