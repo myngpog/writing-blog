@@ -10,7 +10,7 @@ export default function Sidebar() {
   return (
     <aside className="w-[215px] flex sidebar flex-col items-center gap-4 font-accent">
       <img
-        src="/assets/profile.jpg"
+        src="/assets/sakura.jpg"
         className="w-[150px] rounded-[50%]"
         alt="profile"
       />
