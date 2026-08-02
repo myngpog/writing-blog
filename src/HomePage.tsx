@@ -74,7 +74,7 @@ export default function HomePage() {
               A contemporary sci-fi novel; currently DRAFTING
             </span>
           </li>
-          <li>
+          {/* <li>
             <Link
               to="/projects/tqom"
               className="text-lg underline mr-2.5 hover:text-red-300"
@@ -82,7 +82,7 @@ export default function HomePage() {
               this queen of mine
             </Link>
             <span className="text-dark-pink-button">A fantasy Jelsa fic</span>
-          </li>
+          </li> */}
         </ul>
       </section>
 
