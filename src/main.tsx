@@ -7,6 +7,7 @@ import PostDetail from './components/PostDetail';
 import PostsPage from './components/PostsPage';
 import Publications from './components/Publications';
 import WritingStatsPage from './components/WritingStatsPage';
+import Osf from './components/fanfiction/osf';
 import Tqom from './components/fanfiction/tqom';
 import Tcl from './components/fanfiction/tcl';
 import Ttaw from './components/fanfiction/ttaw';
@@ -23,6 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="publications" element={<Publications />} />
         <Route path="projects/daffodils" element={<Daffodils />} />
         <Route path="projects/vth" element={<Vth />} />
+        <Route path="projects/osf" element={<Osf />} />
         <Route path="projects/ttaw" element={<Ttaw />} />
         <Route path="projects/tqom" element={<Tqom />} />
         <Route path="projects/tcl" element={<Tcl />} />

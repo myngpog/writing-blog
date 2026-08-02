@@ -55,6 +55,7 @@ function Navigation({ className }: { className?: string }) {
         <Link to="/projects/vth">Vth</Link>
       </WideDropdown>
       <WideDropdown text="Fanfiction">
+        <Link to="/projects/osf">one sentence fics</Link>
         <Link to="/projects/ttaw">the thing about war</Link>
         <Link to="/projects/tqom">this queen of mine</Link>
         <Link to="/projects/tcl">the color lapis</Link>
